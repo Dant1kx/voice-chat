@@ -1,5 +1,10 @@
-// Подключаемся к стандартному облаку. В браузере оно работает идеально.
-const peer = new Peer();
+const peer = new Peer({
+    host: '://herokuapp.com',
+    port: 443,
+    secure: true,
+    path: '/'
+});
+
 
 let localStream;
 let currentCall;
